@@ -6,11 +6,11 @@ export const getDailyHealthTip = async (donorName: string): Promise<string> => {
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-2.5-flash',
-      contents: `Generate a short, encouraging, one-sentence health tip for a blood donor named ${donorName}. Focus on hydration, iron intake, or rest. Do not be generic.`,
+      contents: `Generate a short, encouraging, one-sentence health tip for a blood donor named ${donorName} in Russian language. Focus on hydration, iron intake, or rest. Do not be generic.`,
     });
-    return response.text || "Stay hydrated and eat iron-rich foods!";
+    return response.text || "Пейте больше воды и употребляйте продукты, богатые железом!";
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return "Thank you for being a lifesaver! Remember to drink plenty of water.";
+    return "Спасибо, что спасаете жизни! Не забудьте хорошо отдохнуть.";
   }
 };
