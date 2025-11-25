@@ -1,0 +1,5 @@
+{
+  "name": "LifeFlow Donor App",
+  "description": "A mobile-first donor interface for managing blood donations, tracking impact, and scheduling appointments.",
+  "requestFramePermissions": []
+}
